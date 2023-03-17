@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye-Animation</title>
+
+    <style>
+        .circle {
+
+            height: 400px;
+            width: 400px;
+            background-color: lightcoral;
+            border-radius: 50%;
+            margin: 0px auto;
+            position: relative; 
+        }
+
+        .eyebrow {position: relative;}
+
+        .circle .eyebrow-l {
+            height: 2px;
+            width: 100px;
+            background-color: black;
+            transform: rotate(30deg);
+            position: absolute;
+            top: 110px;
+            left: 75px;
+            animation: eyebrowl 1s infinite;
+
+        }
+
+
+        .circle .eyebrow-r {
+            height: 2px;
+            width: 100px;
+            background-color: black;
+            transform: rotate(-30deg);
+            position: absolute;
+            top: 110px;
+            right: 75px;
+            animation: eyebrowr 1s infinite;
+
+        }
+
+        .eye {
+            position: relative;
+        }
+
+        .eye .left-eye {
+            height: 100px;
+            width: 80px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 150px;
+            left: 70px;
+        }
+
+        .eye .right-eye {
+            height: 100px;
+            width: 80px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 150px;
+            right: 70px;
+        }
+
+        .eye .b1 {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top:40px;
+            left: 0px;
+            animation: eyeball 1s infinite;
+        }
+
+        .eye .b2 {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top:40px;
+            left: 0px;
+            animation: eyeball 1s infinite;
+        }
+
+        .circle .smile {
+
+            height:30px;
+            width: 80px;
+            background-color: red;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            position: absolute;
+            top: 280px;
+            left: 150px;
+        }
+
+        @keyframes eyebrowl{
+
+            0% {transform: rotate(30deg);}
+            50% {transform: rotate(-10deg);}
+            100% {transform: rotate(30deg);}
+        }
+
+        @keyframes eyebrowr{
+
+            0% {transform: rotate(-30deg);}
+            50% {transform: rotate(-10deg);}
+            100% {transform: rotate(-30deg);}
+        }
+
+        @keyframes eyeball {
+            0%{left: 0px;}
+            50%{left: 60px;}
+            100% {left: 0px;}
+        }
+
+        /* @keyframes eyeball1 {
+            0%{left: 60px;}
+            50%{left: 0px;}
+            100% {left: 60px;}
+        } */
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <div class="eyebrow">
+            <div class="eyebrow-l"></div>
+            <div class="eyebrow-r"></div>
+        </div>
+        <div class="eye">
+            <div class="left-eye">
+                <div class="b1">d</div>
+            </div>
+            <div class="right-eye">
+                <div class="b2">d</div>
+            </div>
+        </div>
+
+        <div class="smile"></div>
+
+    </div>
+</body>
+</html>
